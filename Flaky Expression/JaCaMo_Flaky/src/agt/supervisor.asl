@@ -49,7 +49,7 @@
 
 +reset: result(_,_) <-
 	.all_names(Agents);
-	//.print("Agenti Rimasti", Agents);
+	//.print("left agents ", Agents);
 	//.delete("supervisor", Agents, L)
 	.length(Agents, Lun);
 	for (.range(I, 0, Lun - 1)) {
@@ -70,9 +70,9 @@
 
 	
 +reset: true <-
-	setResult("operazione fallita")[artifact_id(X)];
+	setResult("operation aborted")[artifact_id(X)];
 	.all_names(Agents);
-	//.print("Agenti Rimasti", Agents);
+	//.print("left agents ", Agents);
 	//.delete("supervisor", Agents, L)
 	.length(Agents, Lun);
 	for (.range(I, 0, Lun - 1)) {
@@ -101,7 +101,7 @@
 
 +result(Num, Name) : true <-
 	.wait(1000);
-	.print("il risultato é ottenuto  ", Num, " ricevuto da ", Name);
+	.print("the result is:  ", Num, " received from: ", Name);
 	?gui(X);
 	.term2string(Num, S);
 	setResult(S)[artifact_id(X)];
@@ -109,7 +109,7 @@
 	.				
 	
 +failure[source(X)] : true <-
-	.print("espressione malformata from ", X);
+	.print("expression malformed for: ", X);
 	+reset;
 	.
 

@@ -18,7 +18,7 @@ public class DirectoryService extends Artifact {
 		agentList = new ArrayList<AgentRecord>();
 		//AgentRecord item = new AgentRecord("Supervisor", "idle");
 		//agentList.add(item);
-		System.out.println("artefatto Directory Service creato");
+		System.out.println("artifact Directory Service created ");
 	}
 
 	@OPERATION void addAgent(String agentName, OpFeedbackParam<Integer> id){

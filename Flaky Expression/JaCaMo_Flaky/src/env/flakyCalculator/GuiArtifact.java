@@ -26,14 +26,14 @@ public class GuiArtifact extends GUIArtifact {
 		linkActionEventToOp(frame.clearTextButton,"clearText");
 		linkActionEventToOp(frame.stopWorkingButton, "reset");
 		linkWindowClosingEventToOp(frame, "closed");
-		defineObsProperty("espressione", " ");
+		defineObsProperty("expression", " ");
 		frame.setVisible(true);
 	}
 
 
 	@INTERNAL_OPERATION void calculate(ActionEvent ev){
 		String  expr = frame.textField.getText();
-		getObsProperty("espressione").updateValue(expr);
+		getObsProperty("expression").updateValue(expr);
 		signal("calculate");
 	}
 	
@@ -47,7 +47,7 @@ public class GuiArtifact extends GUIArtifact {
 	}
 	
 	@INTERNAL_OPERATION void clearText(ActionEvent ev){
-		getObsProperty("espressione").updateValue("");
+		getObsProperty("expression").updateValue("");
 	}
 	
 	@OPERATION void setResult(String s){

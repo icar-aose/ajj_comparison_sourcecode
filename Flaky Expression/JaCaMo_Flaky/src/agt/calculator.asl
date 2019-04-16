@@ -60,8 +60,8 @@
 	?iam(NN);
 	.send(X, tell, result(Num, NN));
 	.print(Num);
-	.print("io sono ", NN, " e il mio risultato è ", Num);
-	.print("ho finito");
+	.print("I'm ", NN, " and my result is ", Num);
+	.print("finished.");
 	?myIndex(ID);
 	setStatus(ID, "finished");
 	.

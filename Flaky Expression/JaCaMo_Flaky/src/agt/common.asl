@@ -11,8 +11,8 @@
 	?iam(NN)
 	.send(Ancestor, tell, result(Quoto, NN));
 	.my_name(Name);
-	.print(Name, " divisione ", NumS, "/", NumD);
-	.print(Name, " divisione finita", Quoto);
+	.print(Name, " division ", NumS, "/", NumD);
+	.print(Name, " division finished", Quoto);
 	.
 	
 +!multy: true <-
@@ -23,12 +23,12 @@
 	}
 	?result(NumS, first);
 	?result(NumD, second);
-	Prodotto = NumS * NumD;
+	Product = NumS * NumD;
 	?sender(Ancestor);
 	.send(Ancestor, tell, result(Prodotto, NN));
 	.my_name(Name);
-	.print(Name, " moltiplicazione ", NumS, "*", NumD);
-	.print(Name, "moltiplicazione", Prodotto);
+	.print(Name, " multiplication ", NumS, "*", NumD);
+	.print(Name, "multiplication", Product);
 	.
 	
 +!summy: true <-
@@ -44,7 +44,7 @@
 	?iam(NN)
 	.send(Ancestor, tell, result(Tot, NN));
 	.my_name(Name);
-	.print(Name, " somma ", NumS, " + ", NumD);
-	.print(Name, " somma finita", Tot);
+	.print(Name, " sum ", NumS, " + ", NumD);
+	.print(Name, " sum :", Tot);
 	.
 	
