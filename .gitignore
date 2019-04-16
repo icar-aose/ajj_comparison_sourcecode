@@ -1,0 +1,10 @@
+*.class
+
+**/target
+**/out
+**/bin
+**/build
+
+**/workspace.xml
+
+*.DS_Store
