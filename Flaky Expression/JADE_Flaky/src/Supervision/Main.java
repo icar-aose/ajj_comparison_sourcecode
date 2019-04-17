@@ -33,7 +33,5 @@ public class Main {
         AgentSystem.start();
 
         CalculatorService.start();
-
-        //bisogna passare task a calculator
     }
 }
